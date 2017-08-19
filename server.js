@@ -30,6 +30,10 @@ mongoose.connect('mongodb://saurabh:saurabh@ds153003.mlab.com:53003/app', functi
 
 // Server listen port...
 var port = 4000;
-app.listen(port, function () {
+/*app.listen(port, function () {
 	console.log('Server Running on port ' +port);
+});*/
+
+app.listen(process.env.PORT || port, function(){
+  console.log('listening on', port);
 });
